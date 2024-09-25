@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Check</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .container h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .input-box {
+            margin-bottom: 20px;
+        }
+        .input-box input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .submit-btn {
+            background-color: lightgreen;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .submit-btn:hover {
+            background-color: #8fbc8f;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Security Check</h1>
+    <form id="securityForm">
+        <div class="input-box">
+            <input type="text" id="securityInput" placeholder="Enter input for security check" required>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+    <div class="result" id="resultMessage"></div>
+</div>
+
+<script>
+    document.getElementById('securityForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const data = document.getElementById('securityInput').value;
+        fetch('/analyze', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: new URLSearchParams({ 'data': data })
+        })
+        .then(response => response.json())
+        .then(result => {
+            const messageElement = document.getElementById('resultMessage');
+            if (result.result === "XSS detected") {
+                messageElement.innerHTML = 'XSS detected, request blocked!';
+                messageElement.style.color = 'red';
+            } else {
+                messageElement.innerHTML = 'You are passed';
+                messageElement.style.color = 'green';
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
+</script>
+
+</body>
+</html>
+     
+
