@@ -15,7 +15,7 @@ Before you start, ensure you have the following installed:
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/yourusername/xss-firewall.git
-cd xss-firewall
+cd XSS-Firewall
 ```
 
 ### 2. Grant Execution Permissions
