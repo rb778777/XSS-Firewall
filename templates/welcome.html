@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Punjabi University</title>
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <style>
+        :root {
+            --bg-dark: #121212;
+            --card-bg: #1e1e1e;
+            --text-primary: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --accent: #6a5acd;
+            --accent-hover: #5649b8;
+            --header-bg: #242424;
+            --info-bg: #2a2a2a;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-dark);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            color: var(--text-primary);
+        }
+        
+        .header {
+            background-color: var(--header-bg);
+            width: 100%;
+            padding: 25px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        
+        .logo {
+            max-width: 400px;
+            height: auto;
+            transition: transform 0.3s ease;
+            filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.5));
+        }
+        
+        .logo:hover {
+            transform: scale(1.02);
+        }
+        
+        .welcome-container {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            margin: 40px 20px;
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+            transition: transform 0.3s ease;
+            animation: fadeIn 0.8s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .welcome-container:hover {
+            transform: translateY(-5px);
+        }
+        
+        h1 {
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            font-size: 32px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+        
+        .message {
+            color: var(--text-secondary);
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .user-info {
+            text-align: left;
+            background-color: var(--info-bg);
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 30px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .user-info:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .user-info h3 {
+            color: var(--text-primary);
+            margin-top: 0;
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .user-info h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+        
+        .user-info p {
+            margin: 12px 0;
+            color: var(--text-secondary);
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .user-info p:last-child {
+            border-bottom: none;
+        }
+        
+        .user-info p strong {
+            color: var(--text-primary);
+            margin-right: 10px;
+        }
+        
+        .back-btn {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(106, 90, 205, 0.3);
+        }
+        
+        .back-btn:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(106, 90, 205, 0.4);
+        }
+        
+        .back-btn:active {
+            transform: translateY(1px);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .welcome-container {
+                padding: 30px 20px;
+            }
+            
+            .logo {
+                max-width: 300px;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="\static\punjabi_university_logo.jpg" alt="Punjabi University, Patiala" class="logo">
+    </div>
+    
+    <div class="welcome-container">
+        <h1>Welcome to Punjabi University, Patiala</h1>
+        <div class="message">
+            <p>Thank you for submitting your information. Your form has been successfully validated and processed by our XSS Firewall system.</p>
+            <p>Punjabi University, Patiala is committed to providing a secure digital environment for all users.</p>
+        </div>
+        
+        <div class="user-info">
+            <h3>Your Submitted Information:</h3>
+            <p><strong>Username:</strong> <span id="display-username"></span></p>
+            <p><strong>Email:</strong> <span id="display-email"></span></p>
+            <p><strong>Phone:</strong> <span id="display-phone"></span></p>
+            <p><strong>Message:</strong> <span id="display-comment"></span></p>
+        </div>
+        
+        <a href="/" class="back-btn">Return to Form</a>
+    </div>
+
+    <script>
+        // Retrieve form data from local storage
+        document.getElementById('display-username').textContent = localStorage.getItem('username') || 'Not provided';
+        document.getElementById('display-email').textContent = localStorage.getItem('email') || 'Not provided';
+        document.getElementById('display-phone').textContent = localStorage.getItem('phone') || 'Not provided';
+        document.getElementById('display-comment').textContent = localStorage.getItem('comment') || 'Not provided';
+        
+        // Clear storage after displaying
+        localStorage.removeItem('username');
+        localStorage.removeItem('email');
+        localStorage.removeItem('phone');
+        localStorage.removeItem('comment');
+    </script>
+</body>
+</html> 

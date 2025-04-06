@@ -3,63 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Security Check</title>
+    <title>XSS Firewall Submission Form</title>
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
     <style>
+        :root {
+            --bg-dark: #121212;
+            --card-bg: #1e1e1e;
+            --text-primary: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --accent: #6a5acd;
+            --accent-hover: #5649b8;
+            --input-bg: #2d2d2d;
+            --input-border: #3d3d3d;
+            --input-focus: #6a5acd;
+            --success: #4caf50;
+            --error: #f44336;
+            --success-bg: rgba(76, 175, 80, 0.1);
+            --error-bg: rgba(244, 67, 54, 0.1);
+        }
+        
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background-color: #f4f4f9;
-        }
-        .container {
-            background-color: white;
+            min-height: 100vh;
+            background-color: var(--bg-dark);
+            margin: 0;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            color: var(--text-primary);
+            transition: all 0.3s ease;
         }
-        .container h1 {
-            margin-bottom: 20px;
-            color: #333;
-        }
-        .input-box {
-            margin-bottom: 20px;
-        }
-        .input-box input {
+        
+        .container {
+            background-color: var(--card-bg);
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
             width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            max-width: 600px;
+            transition: transform 0.3s ease;
         }
+        
+        .container:hover {
+            transform: translateY(-5px);
+        }
+        
+        .container h1 {
+            margin-bottom: 30px;
+            color: var(--text-primary);
+            text-align: center;
+            font-size: 28px;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .container h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+            font-size: 16px;
+        }
+        
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            background-color: var(--input-bg);
+            color: var(--text-primary);
+            border: 1px solid var(--input-border);
+            border-radius: 8px;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--input-focus);
+            box-shadow: 0 0 0 3px rgba(106, 90, 205, 0.2);
+        }
+        
+        .form-group input:hover, .form-group textarea:hover {
+            border-color: var(--accent);
+        }
+        
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
         .submit-btn {
-            background-color: lightgreen;
+            background-color: var(--accent);
             border: none;
-            padding: 10px 20px;
+            padding: 16px 20px;
             color: white;
             font-size: 16px;
+            font-weight: 600;
             cursor: pointer;
-            border-radius: 4px;
+            border-radius: 8px;
+            width: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(106, 90, 205, 0.3);
         }
+        
         .submit-btn:hover {
-            background-color: #8fbc8f;
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(106, 90, 205, 0.4);
         }
+        
+        .submit-btn:active {
+            transform: translateY(1px);
+        }
+        
         .result {
-            margin-top: 20px;
-            font-size: 18px;
+            margin-top: 25px;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            display: none;
+            transition: all 0.3s ease;
+        }
+        
+        .result-success {
+            background-color: var(--success-bg);
+            color: var(--success);
+            border: 1px solid rgba(76, 175, 80, 0.2);
+        }
+        
+        .result-error {
+            background-color: var(--error-bg);
+            color: var(--error);
+            border: 1px solid rgba(244, 67, 54, 0.2);
+        }
+        
+        .field-result {
+            margin-top: 8px;
+            font-size: 14px;
+            padding: 5px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .field-safe {
+            color: var(--success);
+        }
+        
+        .field-unsafe {
+            color: var(--error);
+        }
+        
+        /* Input placeholder animation */
+        .form-group input::placeholder, .form-group textarea::placeholder {
+            transition: all 0.3s ease;
+            color: var(--text-secondary);
+        }
+        
+        .form-group input:focus::placeholder, .form-group textarea:focus::placeholder {
+            opacity: 0.5;
+            transform: translateX(10px);
+        }
+        
+        .phone-info {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-top: 8px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 25px;
+            }
+            
+            .form-group input, .form-group textarea {
+                padding: 12px;
+            }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Security Check</h1>
+    <h1>XSS Firewall Protection</h1>
     <form id="securityForm">
-        <div class="input-box">
-            <input type="text" id="securityInput" placeholder="Enter input for security check" required>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            <div class="field-result" id="username-result"></div>
         </div>
-        <button type="submit" class="submit-btn">Submit</button>
+        
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            <div class="field-result" id="email-result"></div>
+        </div>
+        
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" 
+                   placeholder="Enter your phone number" 
+                   pattern="^[+]?[0-9]{10,15}$" 
+                   title="Phone number must contain only digits (10-15 numbers)" 
+                   required>
+            <div class="field-result" id="phone-result"></div>
+            <div class="phone-info">Numbers only: 10-15 digits (e.g., 1234567890)</div>
+        </div>
+        
+        <div class="form-group">
+            <label for="comment">Message</label>
+            <textarea id="comment" name="comment" placeholder="Enter your message" required></textarea>
+            <div class="field-result" id="comment-result"></div>
+        </div>
+        
+        <button type="submit" class="submit-btn">Submit Form</button>
     </form>
     <div class="result" id="resultMessage"></div>
 </div>
@@ -67,27 +244,78 @@
 <script>
     document.getElementById('securityForm').addEventListener('submit', function(event) {
         event.preventDefault();
-        const data = document.getElementById('securityInput').value;
+        
+        // Get all form fields
+        const username = document.getElementById('username').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const comment = document.getElementById('comment').value;
+        
+        // Clear previous results
+        document.querySelectorAll('.field-result').forEach(el => {
+            el.textContent = '';
+            el.className = 'field-result';
+        });
+        
+        const resultMessage = document.getElementById('resultMessage');
+        resultMessage.style.display = 'none';
+        resultMessage.className = 'result';
+        
+        // Send data to server
         fetch('/analyze', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
-            body: new URLSearchParams({ 'data': data })
+            body: new URLSearchParams({
+                'username': username,
+                'email': email, 
+                'phone': phone,
+                'comment': comment
+            })
         })
         .then(response => response.json())
         .then(result => {
-            const messageElement = document.getElementById('resultMessage');
-            if (result.result === "XSS detected") {
-                messageElement.innerHTML = 'XSS detected, request blocked!';
-                messageElement.style.color = 'red';
+            resultMessage.style.display = 'block';
+            
+            if (result.overall_safe) {
+                resultMessage.textContent = 'Form submitted successfully! All fields passed security check.';
+                resultMessage.classList.add('result-success');
+                
+                // Store form data in local storage for the welcome page
+                localStorage.setItem('username', username);
+                localStorage.setItem('email', email);
+                localStorage.setItem('phone', phone);
+                localStorage.setItem('comment', comment);
+                
+                // Redirect to welcome page after a short delay
+                setTimeout(function() {
+                    window.location.href = '/welcome';
+                }, 1500);
             } else {
-                messageElement.innerHTML = 'Request Passed';
-                messageElement.style.color = 'green';
+                resultMessage.textContent = 'Security issues detected. Please review the highlighted fields.';
+                resultMessage.classList.add('result-error');
+                
+                // Show individual field results
+                Object.keys(result.fields).forEach(field => {
+                    const fieldResult = document.getElementById(`${field}-result`);
+                    if (fieldResult) {
+                        if (result.fields[field].safe) {
+                            fieldResult.textContent = 'Passed';
+                            fieldResult.classList.add('field-safe');
+                        } else {
+                            fieldResult.textContent = 'XSS detected! Please revise.';
+                            fieldResult.classList.add('field-unsafe');
+                        }
+                    }
+                });
             }
         })
         .catch(error => {
             console.error('Error:', error);
+            resultMessage.style.display = 'block';
+            resultMessage.textContent = 'An error occurred while processing your request.';
+            resultMessage.classList.add('result-error');
         });
     });
 </script>
