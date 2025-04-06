@@ -1,0 +1,349 @@
+2025-03-28 20:01:22,227 - xss-train - INFO - Starting training with configuration:
+2025-03-28 20:01:22,227 - xss-train - INFO -   dataset_path: XSS_dataset.csv
+2025-03-28 20:01:22,227 - xss-train - INFO -   model_dir: models
+2025-03-28 20:01:22,227 - xss-train - INFO -   model_name: xss_detection_model.pth
+2025-03-28 20:01:22,227 - xss-train - INFO -   max_len: 256
+2025-03-28 20:01:22,227 - xss-train - INFO -   batch_size: 64
+2025-03-28 20:01:22,227 - xss-train - INFO -   epochs: 10
+2025-03-28 20:01:22,227 - xss-train - INFO -   learning_rate: 2e-05
+2025-03-28 20:01:22,227 - xss-train - INFO -   warmup_steps: 0
+2025-03-28 20:01:22,227 - xss-train - INFO -   weight_decay: 0.01
+2025-03-28 20:01:22,227 - xss-train - INFO -   dropout: 0.3
+2025-03-28 20:01:22,227 - xss-train - INFO -   test_size: 0.1
+2025-03-28 20:01:22,227 - xss-train - INFO -   random_seed: 42
+2025-03-28 20:01:22,227 - xss-train - INFO -   use_amp: True
+2025-03-28 20:01:22,227 - xss-train - INFO -   save_checkpoints: True
+2025-03-28 20:01:22,227 - xss-train - INFO -   checkpoint_interval: 1
+2025-03-28 20:01:22,315 - xss-train - INFO - Dataset loaded: 13686 records
+2025-03-28 20:01:22,315 - xss-train - INFO - Class distribution: {1: 7373, 0: 6313}
+2025-03-28 20:01:22,315 - xss-train - INFO - Class 0 (Safe): 6313 samples (46.13%)
+2025-03-28 20:01:22,315 - xss-train - INFO - Class 1 (XSS): 7373 samples (53.87%)
+2025-03-28 20:01:22,331 - xss-train - INFO - Training set: 12317 samples
+2025-03-28 20:01:22,331 - xss-train - INFO - Validation set: 1369 samples
+2025-03-28 20:01:23,856 - xss-train - INFO - Using device: cpu
+2025-03-28 20:01:23,857 - xss-train - INFO - Class weights: [1.0839537382125854, 0.9281160831451416]
+2025-03-28 20:01:26,791 - xss-train - INFO - Epoch 1/10
+2025-03-28 20:01:26,792 - xss-train - INFO - ==============================
+2025-03-28 20:05:14,440 - xss-train - INFO - Starting training with configuration:
+2025-03-28 20:05:14,440 - xss-train - INFO -   dataset_path: XSS_dataset.csv
+2025-03-28 20:05:14,440 - xss-train - INFO -   model_dir: models
+2025-03-28 20:05:14,440 - xss-train - INFO -   model_name: xss_detection_model.pth
+2025-03-28 20:05:14,440 - xss-train - INFO -   max_len: 256
+2025-03-28 20:05:14,440 - xss-train - INFO -   batch_size: 64
+2025-03-28 20:05:14,440 - xss-train - INFO -   epochs: 10
+2025-03-28 20:05:14,440 - xss-train - INFO -   learning_rate: 2e-05
+2025-03-28 20:05:14,440 - xss-train - INFO -   warmup_steps: 0
+2025-03-28 20:05:14,440 - xss-train - INFO -   weight_decay: 0.01
+2025-03-28 20:05:14,440 - xss-train - INFO -   dropout: 0.3
+2025-03-28 20:05:14,440 - xss-train - INFO -   test_size: 0.1
+2025-03-28 20:05:14,440 - xss-train - INFO -   random_seed: 42
+2025-03-28 20:05:14,440 - xss-train - INFO -   use_amp: True
+2025-03-28 20:05:14,440 - xss-train - INFO -   save_checkpoints: True
+2025-03-28 20:05:14,447 - xss-train - INFO -   checkpoint_interval: 1
+2025-03-28 20:05:14,484 - xss-train - INFO - Dataset loaded: 13686 records
+2025-03-28 20:05:14,494 - xss-train - INFO - Class distribution: {1: 7373, 0: 6313}
+2025-03-28 20:05:14,494 - xss-train - INFO - Class 0 (Safe): 6313 samples (46.13%)
+2025-03-28 20:05:14,494 - xss-train - INFO - Class 1 (XSS): 7373 samples (53.87%)
+2025-03-28 20:05:14,494 - xss-train - INFO - Training set: 12317 samples
+2025-03-28 20:05:14,494 - xss-train - INFO - Validation set: 1369 samples
+2025-03-28 20:05:14,862 - xss-train - INFO - Using device: cpu
+2025-03-28 20:05:14,862 - xss-train - INFO - Class weights: [1.0839537382125854, 0.9281160831451416]
+2025-03-28 20:05:16,710 - xss-train - INFO - Mixed precision training (AMP) disabled because CUDA is not available
+2025-03-28 20:05:16,710 - xss-train - INFO - Epoch 1/10
+2025-03-28 20:05:16,710 - xss-train - INFO - ==============================
+2025-03-28 21:20:28,214 - xss-train - INFO - Accuracy: 0.9978, Loss: 0.0075
+2025-03-28 21:20:28,230 - xss-train - INFO - Precision: 0.9960, Recall: 1.0000, F1 Score: 0.9980
+2025-03-28 21:20:28,230 - xss-train - INFO - Train Loss: 0.0814, Train Acc: 0.9782
+2025-03-28 21:20:28,230 - xss-train - INFO - Val Loss: 0.0075, Val Acc: 0.9978, Val F1: 0.9980
+2025-03-28 21:20:28,642 - xss-train - INFO - Model saved to models\checkpoint_epoch_1.pth
+2025-03-28 21:20:28,658 - xss-train - INFO - Metrics saved to models\checkpoint_epoch_1_metrics.json
+2025-03-28 21:20:29,056 - xss-train - INFO - Model saved to models\best_model.pth
+2025-03-28 21:20:29,056 - xss-train - INFO - Metrics saved to models\best_model_metrics.json
+2025-03-28 21:20:29,056 - xss-train - INFO - New best model saved with F1 score: 0.9980
+2025-03-28 21:20:29,056 - xss-train - INFO - Epoch 2/10
+2025-03-28 21:20:29,056 - xss-train - INFO - ==============================
+2025-03-28 21:28:42,812 - xss-train - INFO - Starting training with configuration:
+2025-03-28 21:28:42,812 - xss-train - INFO -   dataset_path: XSS_dataset.csv
+2025-03-28 21:28:42,812 - xss-train - INFO -   model_dir: models
+2025-03-28 21:28:42,812 - xss-train - INFO -   model_name: xss_detection_model.pth
+2025-03-28 21:28:42,812 - xss-train - INFO -   max_len: 256
+2025-03-28 21:28:42,812 - xss-train - INFO -   batch_size: 64
+2025-03-28 21:28:42,812 - xss-train - INFO -   epochs: 10
+2025-03-28 21:28:42,812 - xss-train - INFO -   learning_rate: 2e-05
+2025-03-28 21:28:42,812 - xss-train - INFO -   warmup_steps: 0
+2025-03-28 21:28:42,812 - xss-train - INFO -   weight_decay: 0.01
+2025-03-28 21:28:42,812 - xss-train - INFO -   dropout: 0.3
+2025-03-28 21:28:42,812 - xss-train - INFO -   test_size: 0.1
+2025-03-28 21:28:42,812 - xss-train - INFO -   random_seed: 42
+2025-03-28 21:28:42,812 - xss-train - INFO -   use_amp: True
+2025-03-28 21:28:42,812 - xss-train - INFO -   save_checkpoints: True
+2025-03-28 21:28:42,812 - xss-train - INFO -   checkpoint_interval: 1
+2025-03-28 21:28:43,133 - xss-train - INFO - Dataset loaded: 13686 records
+2025-03-28 21:28:43,133 - xss-train - INFO - Class distribution: {1: 7373, 0: 6313}
+2025-03-28 21:28:43,133 - xss-train - INFO - Class 0 (Safe): 6313 samples (46.13%)
+2025-03-28 21:28:43,133 - xss-train - INFO - Class 1 (XSS): 7373 samples (53.87%)
+2025-03-28 21:28:43,133 - xss-train - INFO - Training set: 12317 samples
+2025-03-28 21:28:43,133 - xss-train - INFO - Validation set: 1369 samples
+2025-03-28 21:28:43,558 - xss-train - INFO - Using device: cpu
+2025-03-28 21:28:43,577 - xss-train - INFO - Class weights: [1.0839537382125854, 0.9281160831451416]
+2025-03-28 21:28:45,310 - xss-train - INFO - Mixed precision training (AMP) disabled because CUDA is not available
+2025-03-28 21:28:45,310 - xss-train - INFO - Epoch 1/10
+2025-03-28 21:28:45,310 - xss-train - INFO - ==============================
+2025-03-28 21:36:38,834 - xss-train - INFO - Starting training with configuration:
+2025-03-28 21:36:38,835 - xss-train - INFO -   dataset_path: XSS_dataset.csv
+2025-03-28 21:36:38,835 - xss-train - INFO -   model_dir: models
+2025-03-28 21:36:38,835 - xss-train - INFO -   model_name: xss_detection_model.pth
+2025-03-28 21:36:38,835 - xss-train - INFO -   max_len: 256
+2025-03-28 21:36:38,836 - xss-train - INFO -   batch_size: 64
+2025-03-28 21:36:38,836 - xss-train - INFO -   epochs: 10
+2025-03-28 21:36:38,836 - xss-train - INFO -   learning_rate: 2e-05
+2025-03-28 21:36:38,836 - xss-train - INFO -   warmup_steps: 0
+2025-03-28 21:36:38,836 - xss-train - INFO -   weight_decay: 0.01
+2025-03-28 21:36:38,837 - xss-train - INFO -   dropout: 0.3
+2025-03-28 21:36:38,837 - xss-train - INFO -   test_size: 0.1
+2025-03-28 21:36:38,837 - xss-train - INFO -   random_seed: 42
+2025-03-28 21:36:38,837 - xss-train - INFO -   use_amp: True
+2025-03-28 21:36:38,837 - xss-train - INFO -   save_checkpoints: True
+2025-03-28 21:36:38,837 - xss-train - INFO -   checkpoint_interval: 1
+2025-03-28 21:36:38,867 - xss-train - INFO - Dataset loaded: 13686 records
+2025-03-28 21:36:38,869 - xss-train - INFO - Class distribution: {1: 7373, 0: 6313}
+2025-03-28 21:36:38,869 - xss-train - INFO - Class 0 (Safe): 6313 samples (46.13%)
+2025-03-28 21:36:38,869 - xss-train - INFO - Class 1 (XSS): 7373 samples (53.87%)
+2025-03-28 21:36:38,873 - xss-train - INFO - Training set: 12317 samples
+2025-03-28 21:36:38,873 - xss-train - INFO - Validation set: 1369 samples
+2025-03-28 21:36:39,300 - xss-train - INFO - Using device: cuda
+2025-03-28 21:36:39,369 - xss-train - INFO - Class weights: [1.0839537382125854, 0.9281160831451416]
+2025-03-28 21:36:41,525 - xss-train - INFO - Epoch 1/10
+2025-03-28 21:36:41,525 - xss-train - INFO - ==============================
+2025-03-28 21:44:31,578 - xss-train - INFO - Starting training with configuration:
+2025-03-28 21:44:31,578 - xss-train - INFO -   dataset_path: XSS_dataset.csv
+2025-03-28 21:44:31,578 - xss-train - INFO -   model_dir: models
+2025-03-28 21:44:31,578 - xss-train - INFO -   model_name: xss_detection_model.pth
+2025-03-28 21:44:31,578 - xss-train - INFO -   max_len: 256
+2025-03-28 21:44:31,578 - xss-train - INFO -   batch_size: 64
+2025-03-28 21:44:31,578 - xss-train - INFO -   epochs: 10
+2025-03-28 21:44:31,578 - xss-train - INFO -   learning_rate: 2e-05
+2025-03-28 21:44:31,578 - xss-train - INFO -   warmup_steps: 0
+2025-03-28 21:44:31,578 - xss-train - INFO -   weight_decay: 0.01
+2025-03-28 21:44:31,578 - xss-train - INFO -   dropout: 0.3
+2025-03-28 21:44:31,578 - xss-train - INFO -   test_size: 0.1
+2025-03-28 21:44:31,579 - xss-train - INFO -   random_seed: 42
+2025-03-28 21:44:31,579 - xss-train - INFO -   use_amp: True
+2025-03-28 21:44:31,579 - xss-train - INFO -   save_checkpoints: True
+2025-03-28 21:44:31,579 - xss-train - INFO -   checkpoint_interval: 1
+2025-03-28 21:44:31,599 - xss-train - INFO - Dataset loaded: 13686 records
+2025-03-28 21:44:31,601 - xss-train - INFO - Class distribution: {1: 7373, 0: 6313}
+2025-03-28 21:44:31,601 - xss-train - INFO - Class 0 (Safe): 6313 samples (46.13%)
+2025-03-28 21:44:31,601 - xss-train - INFO - Class 1 (XSS): 7373 samples (53.87%)
+2025-03-28 21:44:31,604 - xss-train - INFO - Training set: 12317 samples
+2025-03-28 21:44:31,604 - xss-train - INFO - Validation set: 1369 samples
+2025-03-28 21:44:32,409 - xss-train - INFO - Using device: cuda
+2025-03-28 21:44:32,457 - xss-train - INFO - Class weights: [1.0839537382125854, 0.9281160831451416]
+2025-03-28 21:44:34,475 - xss-train - INFO - Epoch 1/10
+2025-03-28 21:44:34,475 - xss-train - INFO - ==============================
+2025-03-28 21:47:45,611 - xss-train - INFO - Accuracy: 0.9993, Loss: 0.0029
+2025-03-28 21:47:45,612 - xss-train - INFO - Precision: 1.0000, Recall: 0.9986, F1 Score: 0.9993
+2025-03-28 21:47:45,612 - xss-train - INFO - Train Loss: 0.0356, Train Acc: 0.9893
+2025-03-28 21:47:45,612 - xss-train - INFO - Val Loss: 0.0029, Val Acc: 0.9993, Val F1: 0.9993
+2025-03-28 21:47:45,869 - xss-train - INFO - Model saved to models\checkpoint_epoch_1.pth
+2025-03-28 21:47:45,869 - xss-train - INFO - Metrics saved to models\checkpoint_epoch_1_metrics.json
+2025-03-28 21:47:46,115 - xss-train - INFO - Model saved to models\best_model.pth
+2025-03-28 21:47:46,115 - xss-train - INFO - Metrics saved to models\best_model_metrics.json
+2025-03-28 21:47:46,115 - xss-train - INFO - New best model saved with F1 score: 0.9993
+2025-03-28 21:47:46,115 - xss-train - INFO - Epoch 2/10
+2025-03-28 21:47:46,115 - xss-train - INFO - ==============================
+2025-03-28 21:51:00,305 - xss-train - INFO - Accuracy: 1.0000, Loss: 0.0005
+2025-03-28 21:51:00,306 - xss-train - INFO - Precision: 1.0000, Recall: 1.0000, F1 Score: 1.0000
+2025-03-28 21:51:00,307 - xss-train - INFO - Train Loss: 0.0031, Train Acc: 0.9991
+2025-03-28 21:51:00,308 - xss-train - INFO - Val Loss: 0.0005, Val Acc: 1.0000, Val F1: 1.0000
+2025-03-28 21:51:00,599 - xss-train - INFO - Model saved to models\checkpoint_epoch_2.pth
+2025-03-28 21:51:00,600 - xss-train - INFO - Metrics saved to models\checkpoint_epoch_2_metrics.json
+2025-03-28 21:51:00,958 - xss-train - INFO - Model saved to models\best_model.pth
+2025-03-28 21:51:00,960 - xss-train - INFO - Metrics saved to models\best_model_metrics.json
+2025-03-28 21:51:00,960 - xss-train - INFO - New best model saved with F1 score: 1.0000
+2025-03-28 21:51:00,961 - xss-train - INFO - Epoch 3/10
+2025-03-28 21:51:00,962 - xss-train - INFO - ==============================
+2025-03-28 21:54:16,933 - xss-train - INFO - Accuracy: 1.0000, Loss: 0.0002
+2025-03-28 21:54:16,933 - xss-train - INFO - Precision: 1.0000, Recall: 1.0000, F1 Score: 1.0000
+2025-03-28 21:54:16,933 - xss-train - INFO - Train Loss: 0.0015, Train Acc: 0.9996
+2025-03-28 21:54:16,933 - xss-train - INFO - Val Loss: 0.0002, Val Acc: 1.0000, Val F1: 1.0000
+2025-03-28 21:54:17,187 - xss-train - INFO - Model saved to models\checkpoint_epoch_3.pth
+2025-03-28 21:54:17,188 - xss-train - INFO - Metrics saved to models\checkpoint_epoch_3_metrics.json
+2025-03-28 21:54:17,189 - xss-train - INFO - Epoch 4/10
+2025-03-28 21:54:17,189 - xss-train - INFO - ==============================
+2025-03-28 21:57:27,709 - xss-train - INFO - Accuracy: 0.9985, Loss: 0.0036
+2025-03-28 21:57:27,709 - xss-train - INFO - Precision: 0.9973, Recall: 1.0000, F1 Score: 0.9986
+2025-03-28 21:57:27,709 - xss-train - INFO - Train Loss: 0.0003, Train Acc: 1.0000
+2025-03-28 21:57:27,710 - xss-train - INFO - Val Loss: 0.0036, Val Acc: 0.9985, Val F1: 0.9986
+2025-03-28 21:57:27,986 - xss-train - INFO - Model saved to models\checkpoint_epoch_4.pth
+2025-03-28 21:57:27,987 - xss-train - INFO - Metrics saved to models\checkpoint_epoch_4_metrics.json
+2025-03-28 21:57:27,988 - xss-train - INFO - Epoch 5/10
+2025-03-28 21:57:27,988 - xss-train - INFO - ==============================
+2025-03-28 22:00:42,343 - xss-train - INFO - Accuracy: 0.9993, Loss: 0.0011
+2025-03-28 22:00:42,345 - xss-train - INFO - Precision: 1.0000, Recall: 0.9986, F1 Score: 0.9993
+2025-03-28 22:00:42,346 - xss-train - INFO - Train Loss: 0.0013, Train Acc: 0.9997
+2025-03-28 22:00:42,347 - xss-train - INFO - Val Loss: 0.0011, Val Acc: 0.9993, Val F1: 0.9993
+2025-03-28 22:00:42,649 - xss-train - INFO - Model saved to models\checkpoint_epoch_5.pth
+2025-03-28 22:00:42,651 - xss-train - INFO - Metrics saved to models\checkpoint_epoch_5_metrics.json
+2025-03-28 22:00:42,652 - xss-train - INFO - Epoch 6/10
+2025-03-28 22:00:42,652 - xss-train - INFO - ==============================
+2025-03-28 22:03:59,049 - xss-train - INFO - Accuracy: 0.9993, Loss: 0.0010
+2025-03-28 22:03:59,050 - xss-train - INFO - Precision: 0.9986, Recall: 1.0000, F1 Score: 0.9993
+2025-03-28 22:03:59,050 - xss-train - INFO - Train Loss: 0.0001, Train Acc: 1.0000
+2025-03-28 22:03:59,050 - xss-train - INFO - Val Loss: 0.0010, Val Acc: 0.9993, Val F1: 0.9993
+2025-03-28 22:03:59,358 - xss-train - INFO - Model saved to models\checkpoint_epoch_6.pth
+2025-03-28 22:03:59,359 - xss-train - INFO - Metrics saved to models\checkpoint_epoch_6_metrics.json
+2025-03-28 22:03:59,360 - xss-train - INFO - Epoch 7/10
+2025-03-28 22:03:59,360 - xss-train - INFO - ==============================
+2025-03-28 22:07:13,788 - xss-train - INFO - Accuracy: 0.9993, Loss: 0.0008
+2025-03-28 22:07:13,788 - xss-train - INFO - Precision: 0.9986, Recall: 1.0000, F1 Score: 0.9993
+2025-03-28 22:07:13,788 - xss-train - INFO - Train Loss: 0.0000, Train Acc: 1.0000
+2025-03-28 22:07:13,788 - xss-train - INFO - Val Loss: 0.0008, Val Acc: 0.9993, Val F1: 0.9993
+2025-03-28 22:07:14,117 - xss-train - INFO - Model saved to models\checkpoint_epoch_7.pth
+2025-03-28 22:07:14,120 - xss-train - INFO - Metrics saved to models\checkpoint_epoch_7_metrics.json
+2025-03-28 22:07:14,122 - xss-train - INFO - Epoch 8/10
+2025-03-28 22:07:14,122 - xss-train - INFO - ==============================
+2025-03-28 22:10:28,023 - xss-train - INFO - Accuracy: 0.9993, Loss: 0.0007
+2025-03-28 22:10:28,024 - xss-train - INFO - Precision: 0.9986, Recall: 1.0000, F1 Score: 0.9993
+2025-03-28 22:10:28,024 - xss-train - INFO - Train Loss: 0.0000, Train Acc: 1.0000
+2025-03-28 22:10:28,024 - xss-train - INFO - Val Loss: 0.0007, Val Acc: 0.9993, Val F1: 0.9993
+2025-03-28 22:10:28,337 - xss-train - INFO - Model saved to models\checkpoint_epoch_8.pth
+2025-03-28 22:10:28,338 - xss-train - INFO - Metrics saved to models\checkpoint_epoch_8_metrics.json
+2025-03-28 22:10:28,339 - xss-train - INFO - Epoch 9/10
+2025-03-28 22:10:28,340 - xss-train - INFO - ==============================
+2025-03-28 22:13:44,154 - xss-train - INFO - Accuracy: 0.9993, Loss: 0.0006
+2025-03-28 22:13:44,154 - xss-train - INFO - Precision: 0.9986, Recall: 1.0000, F1 Score: 0.9993
+2025-03-28 22:13:44,155 - xss-train - INFO - Train Loss: 0.0000, Train Acc: 1.0000
+2025-03-28 22:13:44,155 - xss-train - INFO - Val Loss: 0.0006, Val Acc: 0.9993, Val F1: 0.9993
+2025-03-28 22:13:44,445 - xss-train - INFO - Model saved to models\checkpoint_epoch_9.pth
+2025-03-28 22:13:44,447 - xss-train - INFO - Metrics saved to models\checkpoint_epoch_9_metrics.json
+2025-03-28 22:13:44,448 - xss-train - INFO - Epoch 10/10
+2025-03-28 22:13:44,448 - xss-train - INFO - ==============================
+2025-03-28 22:16:59,185 - xss-train - INFO - Accuracy: 1.0000, Loss: 0.0005
+2025-03-28 22:16:59,186 - xss-train - INFO - Precision: 1.0000, Recall: 1.0000, F1 Score: 1.0000
+2025-03-28 22:16:59,186 - xss-train - INFO - Train Loss: 0.0000, Train Acc: 1.0000
+2025-03-28 22:16:59,187 - xss-train - INFO - Val Loss: 0.0005, Val Acc: 1.0000, Val F1: 1.0000
+2025-03-28 22:16:59,486 - xss-train - INFO - Model saved to models\checkpoint_epoch_10.pth
+2025-03-28 22:16:59,488 - xss-train - INFO - Metrics saved to models\checkpoint_epoch_10_metrics.json
+2025-03-28 22:16:59,756 - xss-train - INFO - Model saved to models\xss_detection_model.pth
+2025-03-28 22:16:59,757 - xss-train - INFO - Metrics saved to models\xss_detection_model_metrics.json
+2025-03-28 22:17:01,508 - xss-train - INFO - Training plots saved to plots
+2025-03-28 22:17:01,508 - xss-train - INFO - Training completed in 0h 32m 27.03s
+2025-03-28 22:17:01,508 - xss-train - INFO - Best model at epoch 2 with F1 score: 1.0000
+2025-03-28 22:17:01,528 - xss-train - INFO - Final model saved to models\xss_detection_model.pth
+2025-03-28 22:33:11,347 - xss-train - INFO - Starting training with configuration:
+2025-03-28 22:33:11,347 - xss-train - INFO -   dataset_path: XSS_dataset.csv
+2025-03-28 22:33:11,347 - xss-train - INFO -   model_dir: models
+2025-03-28 22:33:11,347 - xss-train - INFO -   model_name: xss_detection_model.pth
+2025-03-28 22:33:11,347 - xss-train - INFO -   max_len: 256
+2025-03-28 22:33:11,347 - xss-train - INFO -   batch_size: 64
+2025-03-28 22:33:11,347 - xss-train - INFO -   epochs: 10
+2025-03-28 22:33:11,347 - xss-train - INFO -   learning_rate: 2e-05
+2025-03-28 22:33:11,347 - xss-train - INFO -   warmup_steps: 0
+2025-03-28 22:33:11,347 - xss-train - INFO -   weight_decay: 0.01
+2025-03-28 22:33:11,347 - xss-train - INFO -   dropout: 0.3
+2025-03-28 22:33:11,347 - xss-train - INFO -   test_size: 0.1
+2025-03-28 22:33:11,347 - xss-train - INFO -   random_seed: 42
+2025-03-28 22:33:11,347 - xss-train - INFO -   use_amp: True
+2025-03-28 22:33:11,348 - xss-train - INFO -   save_checkpoints: True
+2025-03-28 22:33:11,348 - xss-train - INFO -   checkpoint_interval: 1
+2025-03-28 22:33:11,368 - xss-train - INFO - Dataset loaded: 13686 records
+2025-03-28 22:33:11,370 - xss-train - INFO - Class distribution: {1: 7373, 0: 6313}
+2025-03-28 22:33:11,370 - xss-train - INFO - Class 0 (Safe): 6313 samples (46.13%)
+2025-03-28 22:33:11,370 - xss-train - INFO - Class 1 (XSS): 7373 samples (53.87%)
+2025-03-28 22:33:11,375 - xss-train - INFO - Training set: 12317 samples
+2025-03-28 22:33:11,375 - xss-train - INFO - Validation set: 1369 samples
+2025-03-28 22:33:11,720 - xss-train - INFO - Using device: cuda
+2025-03-28 22:33:11,766 - xss-train - INFO - Class weights: [1.0839537382125854, 0.9281160831451416]
+2025-03-28 22:33:13,689 - xss-train - INFO - Epoch 1/10
+2025-03-28 22:33:13,689 - xss-train - INFO - ==============================
+2025-03-28 22:35:55,222 - xss-train - INFO - Accuracy: 0.9993, Loss: 0.0029
+2025-03-28 22:35:55,223 - xss-train - INFO - Precision: 1.0000, Recall: 0.9986, F1 Score: 0.9993
+2025-03-28 22:35:55,223 - xss-train - INFO - Train Loss: 0.0356, Train Acc: 0.9893
+2025-03-28 22:35:55,223 - xss-train - INFO - Val Loss: 0.0029, Val Acc: 0.9993, Val F1: 0.9993
+2025-03-28 22:35:55,485 - xss-train - INFO - Model saved to models\checkpoint_epoch_1.pth
+2025-03-28 22:35:55,485 - xss-train - INFO - Metrics saved to models\checkpoint_epoch_1_metrics.json
+2025-03-28 22:35:55,747 - xss-train - INFO - Model saved to models\best_model.pth
+2025-03-28 22:35:55,747 - xss-train - INFO - Metrics saved to models\best_model_metrics.json
+2025-03-28 22:35:55,747 - xss-train - INFO - New best model saved with F1 score: 0.9993
+2025-03-28 22:35:55,747 - xss-train - INFO - Epoch 2/10
+2025-03-28 22:35:55,747 - xss-train - INFO - ==============================
+2025-03-28 22:38:38,894 - xss-train - INFO - Accuracy: 1.0000, Loss: 0.0005
+2025-03-28 22:38:38,894 - xss-train - INFO - Precision: 1.0000, Recall: 1.0000, F1 Score: 1.0000
+2025-03-28 22:38:38,894 - xss-train - INFO - Train Loss: 0.0031, Train Acc: 0.9991
+2025-03-28 22:38:38,894 - xss-train - INFO - Val Loss: 0.0005, Val Acc: 1.0000, Val F1: 1.0000
+2025-03-28 22:38:39,202 - xss-train - INFO - Model saved to models\checkpoint_epoch_2.pth
+2025-03-28 22:38:39,213 - xss-train - INFO - Metrics saved to models\checkpoint_epoch_2_metrics.json
+2025-03-28 22:38:39,525 - xss-train - INFO - Model saved to models\best_model.pth
+2025-03-28 22:38:39,527 - xss-train - INFO - Metrics saved to models\best_model_metrics.json
+2025-03-28 22:38:39,527 - xss-train - INFO - New best model saved with F1 score: 1.0000
+2025-03-28 22:38:39,528 - xss-train - INFO - Epoch 3/10
+2025-03-28 22:38:39,528 - xss-train - INFO - ==============================
+2025-03-28 22:41:27,374 - xss-train - INFO - Accuracy: 1.0000, Loss: 0.0002
+2025-03-28 22:41:27,375 - xss-train - INFO - Precision: 1.0000, Recall: 1.0000, F1 Score: 1.0000
+2025-03-28 22:41:27,375 - xss-train - INFO - Train Loss: 0.0015, Train Acc: 0.9996
+2025-03-28 22:41:27,375 - xss-train - INFO - Val Loss: 0.0002, Val Acc: 1.0000, Val F1: 1.0000
+2025-03-28 22:41:27,665 - xss-train - INFO - Model saved to models\checkpoint_epoch_3.pth
+2025-03-28 22:41:27,667 - xss-train - INFO - Metrics saved to models\checkpoint_epoch_3_metrics.json
+2025-03-28 22:41:27,668 - xss-train - INFO - Epoch 4/10
+2025-03-28 22:41:27,668 - xss-train - INFO - ==============================
+2025-03-28 22:44:15,451 - xss-train - INFO - Accuracy: 0.9985, Loss: 0.0036
+2025-03-28 22:44:15,452 - xss-train - INFO - Precision: 0.9973, Recall: 1.0000, F1 Score: 0.9986
+2025-03-28 22:44:15,452 - xss-train - INFO - Train Loss: 0.0003, Train Acc: 1.0000
+2025-03-28 22:44:15,452 - xss-train - INFO - Val Loss: 0.0036, Val Acc: 0.9985, Val F1: 0.9986
+2025-03-28 22:44:15,750 - xss-train - INFO - Model saved to models\checkpoint_epoch_4.pth
+2025-03-28 22:44:15,751 - xss-train - INFO - Metrics saved to models\checkpoint_epoch_4_metrics.json
+2025-03-28 22:44:15,753 - xss-train - INFO - Epoch 5/10
+2025-03-28 22:44:15,753 - xss-train - INFO - ==============================
+2025-03-28 22:47:05,461 - xss-train - INFO - Accuracy: 0.9993, Loss: 0.0011
+2025-03-28 22:47:05,461 - xss-train - INFO - Precision: 1.0000, Recall: 0.9986, F1 Score: 0.9993
+2025-03-28 22:47:05,461 - xss-train - INFO - Train Loss: 0.0013, Train Acc: 0.9997
+2025-03-28 22:47:05,469 - xss-train - INFO - Val Loss: 0.0011, Val Acc: 0.9993, Val F1: 0.9993
+2025-03-28 22:47:05,759 - xss-train - INFO - Model saved to models\checkpoint_epoch_5.pth
+2025-03-28 22:47:05,759 - xss-train - INFO - Metrics saved to models\checkpoint_epoch_5_metrics.json
+2025-03-28 22:47:05,759 - xss-train - INFO - Epoch 6/10
+2025-03-28 22:47:05,759 - xss-train - INFO - ==============================
+2025-03-28 22:49:50,346 - xss-train - INFO - Accuracy: 0.9993, Loss: 0.0010
+2025-03-28 22:49:50,346 - xss-train - INFO - Precision: 0.9986, Recall: 1.0000, F1 Score: 0.9993
+2025-03-28 22:49:50,346 - xss-train - INFO - Train Loss: 0.0001, Train Acc: 1.0000
+2025-03-28 22:49:50,346 - xss-train - INFO - Val Loss: 0.0010, Val Acc: 0.9993, Val F1: 0.9993
+2025-03-28 22:49:50,654 - xss-train - INFO - Model saved to models\checkpoint_epoch_6.pth
+2025-03-28 22:49:50,662 - xss-train - INFO - Metrics saved to models\checkpoint_epoch_6_metrics.json
+2025-03-28 22:49:50,662 - xss-train - INFO - Epoch 7/10
+2025-03-28 22:49:50,664 - xss-train - INFO - ==============================
+2025-03-28 22:52:34,232 - xss-train - INFO - Accuracy: 0.9993, Loss: 0.0008
+2025-03-28 22:52:34,232 - xss-train - INFO - Precision: 0.9986, Recall: 1.0000, F1 Score: 0.9993
+2025-03-28 22:52:34,232 - xss-train - INFO - Train Loss: 0.0000, Train Acc: 1.0000
+2025-03-28 22:52:34,232 - xss-train - INFO - Val Loss: 0.0008, Val Acc: 0.9993, Val F1: 0.9993
+2025-03-28 22:52:34,491 - xss-train - INFO - Model saved to models\checkpoint_epoch_7.pth
+2025-03-28 22:52:34,494 - xss-train - INFO - Metrics saved to models\checkpoint_epoch_7_metrics.json
+2025-03-28 22:52:34,494 - xss-train - INFO - Epoch 8/10
+2025-03-28 22:52:34,494 - xss-train - INFO - ==============================
+2025-03-28 22:55:15,804 - xss-train - INFO - Accuracy: 0.9993, Loss: 0.0007
+2025-03-28 22:55:15,804 - xss-train - INFO - Precision: 0.9986, Recall: 1.0000, F1 Score: 0.9993
+2025-03-28 22:55:15,804 - xss-train - INFO - Train Loss: 0.0000, Train Acc: 1.0000
+2025-03-28 22:55:15,804 - xss-train - INFO - Val Loss: 0.0007, Val Acc: 0.9993, Val F1: 0.9993
+2025-03-28 22:55:17,334 - xss-train - INFO - Model saved to models\checkpoint_epoch_8.pth
+2025-03-28 22:55:17,334 - xss-train - INFO - Metrics saved to models\checkpoint_epoch_8_metrics.json
+2025-03-28 22:55:17,334 - xss-train - INFO - Epoch 9/10
+2025-03-28 22:55:17,334 - xss-train - INFO - ==============================
+2025-03-28 22:57:59,693 - xss-train - INFO - Accuracy: 0.9993, Loss: 0.0006
+2025-03-28 22:57:59,693 - xss-train - INFO - Precision: 0.9986, Recall: 1.0000, F1 Score: 0.9993
+2025-03-28 22:57:59,694 - xss-train - INFO - Train Loss: 0.0000, Train Acc: 1.0000
+2025-03-28 22:57:59,695 - xss-train - INFO - Val Loss: 0.0006, Val Acc: 0.9993, Val F1: 0.9993
+2025-03-28 22:57:59,946 - xss-train - INFO - Model saved to models\checkpoint_epoch_9.pth
+2025-03-28 22:57:59,946 - xss-train - INFO - Metrics saved to models\checkpoint_epoch_9_metrics.json
+2025-03-28 22:57:59,951 - xss-train - INFO - Epoch 10/10
+2025-03-28 22:57:59,951 - xss-train - INFO - ==============================
+2025-03-28 23:00:41,382 - xss-train - INFO - Accuracy: 1.0000, Loss: 0.0005
+2025-03-28 23:00:41,383 - xss-train - INFO - Precision: 1.0000, Recall: 1.0000, F1 Score: 1.0000
+2025-03-28 23:00:41,383 - xss-train - INFO - Train Loss: 0.0000, Train Acc: 1.0000
+2025-03-28 23:00:41,384 - xss-train - INFO - Val Loss: 0.0005, Val Acc: 1.0000, Val F1: 1.0000
+2025-03-28 23:00:41,627 - xss-train - INFO - Model saved to models\checkpoint_epoch_10.pth
+2025-03-28 23:00:41,627 - xss-train - INFO - Metrics saved to models\checkpoint_epoch_10_metrics.json
+2025-03-28 23:00:41,873 - xss-train - INFO - Model saved to models\xss_detection_model.pth
+2025-03-28 23:00:41,873 - xss-train - INFO - Metrics saved to models\xss_detection_model_metrics.json
+2025-03-28 23:00:42,906 - xss-train - INFO - Training plots saved to plots
+2025-03-28 23:00:42,906 - xss-train - INFO - Training completed in 0h 27m 29.22s
+2025-03-28 23:00:42,911 - xss-train - INFO - Best model at epoch 2 with F1 score: 1.0000
+2025-03-28 23:00:42,913 - xss-train - INFO - Final model saved to models\xss_detection_model.pth

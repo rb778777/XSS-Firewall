@@ -1,0 +1,659 @@
+2025-03-28 22:29:52,404 - xss-firewall - ERROR - Failed to load model: Checkpoint not found at xss_detection_model.pth
+2025-03-28 22:29:52,404 - xss-firewall - CRITICAL - Application startup failed: Checkpoint not found at xss_detection_model.pth
+2025-03-28 22:29:52,404 - xss-firewall - CRITICAL - Cannot start application: Model or tokenizer not loaded
+2025-03-28 22:31:44,727 - xss-firewall - INFO - Model loaded successfully to cuda
+2025-03-28 22:31:44,727 - xss-firewall - INFO - XSS Firewall starting up...
+2025-03-28 22:31:44,739 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.5.34:5000
+2025-03-28 22:31:44,739 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-28 22:31:54,588 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 22:31:54] "GET / HTTP/1.1" 200 -
+2025-03-28 22:31:54,711 - firewall - ERROR - Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "c:\Users\ASUS\Desktop\F\XSS-Firewall-main\firewall.py", line 224, in page_not_found
+    return render_template('404.html'), 404
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+2025-03-28 22:31:54,714 - xss-firewall - ERROR - Server error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-03-28 22:31:54,714 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 22:31:54] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-03-28 22:31:54,725 - werkzeug - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "c:\Users\ASUS\Desktop\F\XSS-Firewall-main\firewall.py", line 224, in page_not_found
+    return render_template('404.html'), 404
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 2213, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 2193, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1399, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+  File "c:\Users\ASUS\Desktop\F\XSS-Firewall-main\firewall.py", line 230, in server_error
+    return render_template('500.html'), 500
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 500.html
+2025-03-28 22:32:11,760 - xss-firewall - WARNING - XSS detected in field 'email' with confidence 0.9225
+2025-03-28 22:32:11,768 - xss-firewall - WARNING - XSS detected in field 'phone' with confidence 1.0000
+2025-03-28 22:32:11,778 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 22:32:11] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 22:32:33,815 - xss-firewall - WARNING - XSS detected in field 'email' with confidence 0.9998
+2025-03-28 22:32:33,815 - xss-firewall - WARNING - XSS detected in field 'phone' with confidence 1.0000
+2025-03-28 22:32:33,815 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 22:32:33] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 22:32:42,253 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 1.0000
+2025-03-28 22:32:42,254 - xss-firewall - WARNING - XSS detected in field 'email' with confidence 0.9998
+2025-03-28 22:32:42,254 - xss-firewall - WARNING - XSS detected in field 'phone' with confidence 1.0000
+2025-03-28 22:32:42,254 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 22:32:42] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 23:01:00,251 - xss-firewall - INFO - Model loaded successfully to cuda
+2025-03-28 23:01:00,263 - xss-firewall - INFO - XSS Firewall starting up...
+2025-03-28 23:01:00,279 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.5.34:5000
+2025-03-28 23:01:00,280 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-28 23:01:09,804 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:01:09] "GET / HTTP/1.1" 200 -
+2025-03-28 23:01:09,877 - firewall - ERROR - Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "c:\Users\ASUS\Desktop\F\XSS-Firewall-main\firewall.py", line 224, in page_not_found
+    return render_template('404.html'), 404
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+2025-03-28 23:01:09,945 - xss-firewall - ERROR - Server error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-03-28 23:01:09,945 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:01:09] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-03-28 23:01:09,977 - werkzeug - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "c:\Users\ASUS\Desktop\F\XSS-Firewall-main\firewall.py", line 224, in page_not_found
+    return render_template('404.html'), 404
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 2213, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 2193, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1399, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+  File "c:\Users\ASUS\Desktop\F\XSS-Firewall-main\firewall.py", line 230, in server_error
+    return render_template('500.html'), 500
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 500.html
+2025-03-28 23:01:38,956 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9999
+2025-03-28 23:01:39,090 - xss-firewall - WARNING - XSS detected in field 'email' with confidence 0.9225
+2025-03-28 23:01:39,114 - xss-firewall - WARNING - XSS detected in field 'phone' with confidence 1.0000
+2025-03-28 23:01:39,122 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:01:39] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 23:02:34,130 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 1.0000
+2025-03-28 23:02:34,136 - xss-firewall - WARNING - XSS detected in field 'phone' with confidence 1.0000
+2025-03-28 23:02:34,146 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 0.9991
+2025-03-28 23:02:34,147 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:02:34] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 23:11:49,746 - xss-firewall - INFO - Model loaded successfully to cuda
+2025-03-28 23:11:49,746 - xss-firewall - INFO - XSS Firewall starting up...
+2025-03-28 23:11:49,756 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.5.34:5000
+2025-03-28 23:11:49,756 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-28 23:11:55,217 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:11:55] "GET / HTTP/1.1" 200 -
+2025-03-28 23:11:55,298 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:11:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-28 23:12:10,859 - xss-firewall - WARNING - XSS detected in field 'email' with confidence 0.9225
+2025-03-28 23:12:10,886 - xss-firewall - WARNING - XSS detected in field 'phone' with confidence 1.0000
+2025-03-28 23:12:10,894 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:12:10] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 23:12:33,370 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 1.0000
+2025-03-28 23:12:33,371 - xss-firewall - WARNING - XSS detected in field 'email' with confidence 0.9225
+2025-03-28 23:12:33,372 - xss-firewall - WARNING - XSS detected in field 'phone' with confidence 1.0000
+2025-03-28 23:12:33,372 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:12:33] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 23:14:11,430 - xss-firewall - INFO - Model loaded successfully to cuda
+2025-03-28 23:14:11,430 - xss-firewall - INFO - XSS Firewall starting up...
+2025-03-28 23:14:11,430 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.5.34:5000
+2025-03-28 23:14:11,430 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-28 23:14:13,641 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:14:13] "GET / HTTP/1.1" 200 -
+2025-03-28 23:14:13,715 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:14:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-28 23:14:30,279 - xss-firewall - ERROR - Model inference failed for username: float division by zero
+2025-03-28 23:14:30,280 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:14:30] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2025-03-28 23:14:34,418 - xss-firewall - ERROR - Model inference failed for username: float division by zero
+2025-03-28 23:14:34,418 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:14:34] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2025-03-28 23:14:41,276 - xss-firewall - ERROR - Model inference failed for username: float division by zero
+2025-03-28 23:14:41,276 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:14:41] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2025-03-28 23:15:36,630 - xss-firewall - INFO - Model loaded successfully to cuda
+2025-03-28 23:15:36,630 - xss-firewall - INFO - XSS Firewall starting up...
+2025-03-28 23:15:36,637 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.5.34:5000
+2025-03-28 23:15:36,637 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-28 23:15:39,749 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:15:39] "GET / HTTP/1.1" 200 -
+2025-03-28 23:15:39,823 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:15:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-28 23:16:01,808 - xss-firewall - WARNING - XSS detected in field 'email' with confidence 0.9695
+2025-03-28 23:16:01,818 - xss-firewall - WARNING - XSS detected in field 'phone' with confidence 1.0000
+2025-03-28 23:16:01,829 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:16:01] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 23:18:39,617 - xss-firewall - INFO - Model loaded successfully to cuda
+2025-03-28 23:18:39,617 - xss-firewall - INFO - XSS Firewall starting up...
+2025-03-28 23:18:39,634 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.5.34:5000
+2025-03-28 23:18:39,634 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-28 23:18:41,766 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:18:41] "GET / HTTP/1.1" 200 -
+2025-03-28 23:18:41,798 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:18:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-28 23:19:03,045 - xss-firewall - WARNING - XSS detected in field 'email' with confidence 0.9021
+2025-03-28 23:19:03,144 - xss-firewall - WARNING - XSS detected in field 'phone' with confidence 0.9997
+2025-03-28 23:19:03,156 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 0.8287
+2025-03-28 23:19:03,158 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:19:03] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 23:19:29,824 - xss-firewall - INFO - Model loaded successfully to cuda
+2025-03-28 23:19:29,824 - xss-firewall - INFO - XSS Firewall starting up...
+2025-03-28 23:19:29,836 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.5.34:5000
+2025-03-28 23:19:29,836 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-28 23:19:32,531 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:19:32] "GET / HTTP/1.1" 200 -
+2025-03-28 23:19:32,569 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:19:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-28 23:19:47,245 - xss-firewall - WARNING - XSS detected in field 'email' with confidence 0.9514
+2025-03-28 23:19:47,330 - xss-firewall - WARNING - XSS detected in field 'phone' with confidence 0.9999
+2025-03-28 23:19:47,337 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 0.9843
+2025-03-28 23:19:47,338 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:19:47] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 23:19:56,046 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 1.0000
+2025-03-28 23:19:56,048 - xss-firewall - WARNING - XSS detected in field 'email' with confidence 0.9514
+2025-03-28 23:19:56,048 - xss-firewall - WARNING - XSS detected in field 'phone' with confidence 0.9999
+2025-03-28 23:19:56,049 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 0.9843
+2025-03-28 23:19:56,050 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:19:56] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 23:20:40,409 - xss-firewall - INFO - Model loaded successfully to cuda
+2025-03-28 23:20:40,409 - xss-firewall - INFO - XSS Firewall starting up...
+2025-03-28 23:20:40,424 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.5.34:5000
+2025-03-28 23:20:40,424 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-28 23:20:42,805 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:20:42] "GET / HTTP/1.1" 200 -
+2025-03-28 23:20:42,834 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:20:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-28 23:20:59,135 - xss-firewall - WARNING - XSS detected in field 'email' with confidence 0.9514
+2025-03-28 23:20:59,247 - xss-firewall - WARNING - XSS detected in field 'phone' with confidence 0.9999
+2025-03-28 23:20:59,316 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 0.9826
+2025-03-28 23:20:59,317 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:20:59] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 23:22:56,894 - xss-firewall - INFO - Model loaded successfully to cuda
+2025-03-28 23:22:56,894 - xss-firewall - INFO - XSS Firewall starting up...
+2025-03-28 23:22:56,894 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.5.34:5000
+2025-03-28 23:22:56,894 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-28 23:22:59,794 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:22:59] "GET / HTTP/1.1" 200 -
+2025-03-28 23:22:59,829 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:22:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-28 23:23:15,661 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:23:15] "POST /analyze HTTP/1.1" 200 -
+2025-03-28 23:23:17,210 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:23:17] "GET /welcome HTTP/1.1" 200 -
+2025-03-28 23:23:17,386 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:23:17] "GET /static/punjabi_university_logo.jpg HTTP/1.1" 200 -
+2025-03-28 23:23:21,999 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:23:21] "GET / HTTP/1.1" 200 -
+2025-03-28 23:23:51,484 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 1.0000
+2025-03-28 23:23:51,664 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 1.0000
+2025-03-28 23:23:51,664 - firewall - ERROR - Exception on /analyze [POST]
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "c:\Users\ASUS\Desktop\F\XSS-Firewall-main\firewall.py", line 308, in analyze
+    return jsonify(results), status_code
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\json\provider.py", line 215, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\json\provider.py", line 180, in dumps
+    return json.dumps(obj, **kwargs)
+  File "C:\Program Files\Python310\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Program Files\Python310\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Program Files\Python310\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\json\provider.py", line 120, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type bool_ is not JSON serializable
+2025-03-28 23:23:51,726 - xss-firewall - ERROR - Server error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-03-28 23:23:51,727 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:23:51] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2025-03-28 23:23:56,487 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 1.0000
+2025-03-28 23:23:56,488 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 1.0000
+2025-03-28 23:23:56,489 - firewall - ERROR - Exception on /analyze [POST]
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "c:\Users\ASUS\Desktop\F\XSS-Firewall-main\firewall.py", line 308, in analyze
+    return jsonify(results), status_code
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\json\provider.py", line 215, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\json\provider.py", line 180, in dumps
+    return json.dumps(obj, **kwargs)
+  File "C:\Program Files\Python310\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Program Files\Python310\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Program Files\Python310\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\ASUS\Desktop\F\XSS-Firewall-main\new_update-env\lib\site-packages\flask\json\provider.py", line 120, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type bool_ is not JSON serializable
+2025-03-28 23:23:56,490 - xss-firewall - ERROR - Server error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-03-28 23:23:56,490 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:23:56] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2025-03-28 23:25:24,825 - xss-firewall - INFO - Model loaded successfully to cuda
+2025-03-28 23:25:24,825 - xss-firewall - INFO - XSS Firewall starting up...
+2025-03-28 23:25:24,835 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.5.34:5000
+2025-03-28 23:25:24,836 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-28 23:25:37,941 - xss-firewall - INFO - Model loaded successfully to cuda
+2025-03-28 23:25:37,957 - xss-firewall - INFO - XSS Firewall starting up...
+2025-03-28 23:25:37,957 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.5.34:5000
+2025-03-28 23:25:37,957 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-28 23:25:41,082 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:25:41] "GET / HTTP/1.1" 200 -
+2025-03-28 23:25:41,163 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:25:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-28 23:25:51,729 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:25:51] "POST /analyze HTTP/1.1" 200 -
+2025-03-28 23:25:53,249 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:25:53] "GET /welcome HTTP/1.1" 200 -
+2025-03-28 23:25:53,334 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:25:53] "[36mGET /static/punjabi_university_logo.jpg HTTP/1.1[0m" 304 -
+2025-03-28 23:25:55,675 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:25:55] "GET / HTTP/1.1" 200 -
+2025-03-28 23:26:14,009 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-03-28 23:26:14,026 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:26:14] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 23:26:30,836 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-03-28 23:26:30,912 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 1.0000
+2025-03-28 23:26:30,914 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:26:30] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 23:26:44,108 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-03-28 23:26:44,169 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 1.0000
+2025-03-28 23:26:44,171 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:26:44] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 23:26:54,156 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-03-28 23:26:54,158 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 1.0000
+2025-03-28 23:26:54,159 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:26:54] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 23:27:06,466 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9945
+2025-03-28 23:27:06,468 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 1.0000
+2025-03-28 23:27:06,469 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:27:06] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 23:27:22,178 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9945
+2025-03-28 23:27:22,187 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 1.0000
+2025-03-28 23:27:22,188 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:27:22] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 23:27:31,487 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9994
+2025-03-28 23:27:31,489 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 1.0000
+2025-03-28 23:27:31,489 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:27:31] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 23:27:46,188 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 1.0000
+2025-03-28 23:27:46,188 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:27:46] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 23:27:58,442 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-03-28 23:27:58,443 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 1.0000
+2025-03-28 23:27:58,445 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:27:58] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 23:28:05,636 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-03-28 23:28:05,701 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 0.9992
+2025-03-28 23:28:05,702 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:28:05] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 23:28:22,851 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-03-28 23:28:22,861 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 1.0000
+2025-03-28 23:28:22,862 - xss-firewall - ERROR - Model inference failed for comment: 'charmap' codec can't encode character '\u25d5' in position 53: character maps to <undefined>
+2025-03-28 23:28:22,862 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:28:22] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2025-03-28 23:28:27,795 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-03-28 23:28:27,796 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 1.0000
+2025-03-28 23:28:27,796 - xss-firewall - ERROR - Model inference failed for comment: 'charmap' codec can't encode character '\u25d5' in position 53: character maps to <undefined>
+2025-03-28 23:28:27,797 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:28:27] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2025-03-28 23:28:32,802 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-03-28 23:28:32,805 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 1.0000
+2025-03-28 23:28:32,805 - xss-firewall - ERROR - Model inference failed for comment: 'charmap' codec can't encode character '\u25d5' in position 53: character maps to <undefined>
+2025-03-28 23:28:32,806 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:28:32] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2025-03-28 23:28:36,085 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-03-28 23:28:36,086 - xss-firewall - ERROR - Model inference failed for username: 'charmap' codec can't encode character '\u25d5' in position 54: character maps to <undefined>
+2025-03-28 23:28:36,086 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:28:36] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2025-03-28 23:28:46,870 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-03-28 23:28:46,870 - xss-firewall - ERROR - Model inference failed for username: 'charmap' codec can't encode character '\u25d5' in position 54: character maps to <undefined>
+2025-03-28 23:28:46,870 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:28:46] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2025-03-28 23:28:57,346 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-03-28 23:28:57,359 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 1.0000
+2025-03-28 23:28:57,360 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:28:57] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 23:29:09,216 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-03-28 23:29:09,232 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:29:09] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 23:29:15,375 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-03-28 23:29:15,451 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 1.0000
+2025-03-28 23:29:15,452 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:29:15] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 23:29:28,792 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-03-28 23:29:28,861 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:29:28] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 23:29:37,629 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-03-28 23:29:37,630 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:29:37] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 23:29:49,698 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-03-28 23:29:49,767 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 1.0000
+2025-03-28 23:29:49,768 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:29:49] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 23:29:56,474 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-03-28 23:29:56,746 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 1.0000
+2025-03-28 23:29:56,747 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:29:56] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 23:30:09,836 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-03-28 23:30:09,837 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 1.0000
+2025-03-28 23:30:09,838 - xss-firewall - ERROR - Model inference failed for comment: 'charmap' codec can't encode character '\u25d5' in position 53: character maps to <undefined>
+2025-03-28 23:30:09,838 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:30:09] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2025-03-28 23:30:17,490 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-03-28 23:30:17,557 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 1.0000
+2025-03-28 23:30:17,558 - xss-firewall - ERROR - Model inference failed for comment: 'charmap' codec can't encode character '\u25d5' in position 59: character maps to <undefined>
+2025-03-28 23:30:17,559 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:30:17] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2025-03-28 23:30:20,708 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-03-28 23:30:20,717 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 1.0000
+2025-03-28 23:30:20,717 - xss-firewall - ERROR - Model inference failed for comment: 'charmap' codec can't encode character '\u25d5' in position 59: character maps to <undefined>
+2025-03-28 23:30:20,718 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:30:20] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2025-03-28 23:33:20,099 - xss-firewall - INFO - Model loaded successfully to cuda
+2025-03-28 23:33:20,100 - xss-firewall - INFO - XSS Firewall starting up...
+2025-03-28 23:33:20,105 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.5.34:5000
+2025-03-28 23:33:20,105 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-28 23:33:25,694 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-03-28 23:33:25,700 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 1.0000
+2025-03-28 23:33:25,701 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:33:25] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 23:33:46,484 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 1.0000
+2025-03-28 23:33:46,485 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:33:46] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-28 23:33:52,669 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:33:52] "POST /analyze HTTP/1.1" 200 -
+2025-03-28 23:33:54,191 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:33:54] "GET /welcome HTTP/1.1" 200 -
+2025-03-28 23:33:54,289 - werkzeug - INFO - 192.168.5.34 - - [28/Mar/2025 23:33:54] "[36mGET /static/punjabi_university_logo.jpg HTTP/1.1[0m" 304 -
+2025-03-29 21:27:22,717 - xss-firewall - INFO - Model loaded successfully to cuda
+2025-03-29 21:27:22,717 - xss-firewall - INFO - XSS Firewall starting up...
+2025-03-29 21:27:22,737 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.5.34:5000
+2025-03-29 21:27:22,737 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-29 21:27:29,462 - werkzeug - INFO - 192.168.5.34 - - [29/Mar/2025 21:27:29] "GET / HTTP/1.1" 200 -
+2025-03-29 21:27:29,634 - werkzeug - INFO - 192.168.5.34 - - [29/Mar/2025 21:27:29] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-03-29 21:28:59,583 - xss-firewall - INFO - Model loaded successfully to cuda
+2025-03-29 21:28:59,583 - xss-firewall - INFO - XSS Firewall starting up...
+2025-03-29 21:28:59,592 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.5.34:5000
+2025-03-29 21:28:59,592 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-29 21:29:04,678 - werkzeug - INFO - 192.168.5.34 - - [29/Mar/2025 21:29:04] "GET / HTTP/1.1" 200 -
+2025-03-29 21:29:04,794 - werkzeug - INFO - 192.168.5.34 - - [29/Mar/2025 21:29:04] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-03-29 21:29:44,885 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-03-29 21:29:44,886 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 1.0000
+2025-03-29 21:29:44,887 - werkzeug - INFO - 192.168.5.34 - - [29/Mar/2025 21:29:44] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-29 21:30:20,206 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-03-29 21:30:20,208 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 1.0000
+2025-03-29 21:30:20,209 - werkzeug - INFO - 192.168.5.34 - - [29/Mar/2025 21:30:20] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-03-29 21:30:43,756 - werkzeug - INFO - 192.168.5.34 - - [29/Mar/2025 21:30:43] "POST /analyze HTTP/1.1" 200 -
+2025-03-29 21:30:45,290 - werkzeug - INFO - 192.168.5.34 - - [29/Mar/2025 21:30:45] "GET /welcome HTTP/1.1" 200 -
+2025-03-29 21:30:45,307 - werkzeug - INFO - 192.168.5.34 - - [29/Mar/2025 21:30:45] "[36mGET /static/punjabi_university_logo.jpg HTTP/1.1[0m" 304 -
+2025-03-29 21:31:19,003 - werkzeug - INFO - 192.168.5.34 - - [29/Mar/2025 21:31:19] "GET /welcome HTTP/1.1" 200 -
+2025-03-29 21:31:19,023 - werkzeug - INFO - 192.168.5.34 - - [29/Mar/2025 21:31:19] "GET /static/punjabi_university_logo.jpg HTTP/1.1" 200 -
+2025-03-29 21:31:19,047 - werkzeug - INFO - 192.168.5.34 - - [29/Mar/2025 21:31:19] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-03-29 21:31:37,541 - xss-firewall - INFO - Model loaded successfully to cuda
+2025-03-29 21:31:37,541 - xss-firewall - INFO - XSS Firewall starting up...
+2025-03-29 21:31:37,556 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.5.34:5000
+2025-03-29 21:31:37,556 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-29 21:31:58,396 - werkzeug - INFO - 192.168.5.34 - - [29/Mar/2025 21:31:58] "GET /welcome HTTP/1.1" 200 -
+2025-03-29 21:31:58,455 - werkzeug - INFO - 192.168.5.34 - - [29/Mar/2025 21:31:58] "GET /static/punjabi_university_logo.jpg HTTP/1.1" 200 -
+2025-03-29 21:31:58,483 - werkzeug - INFO - 192.168.5.34 - - [29/Mar/2025 21:31:58] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-03-29 21:32:22,818 - werkzeug - INFO - 192.168.5.34 - - [29/Mar/2025 21:32:22] "GET / HTTP/1.1" 200 -
+2025-04-06 20:26:29,449 - xss-firewall - INFO - Model loaded successfully to cuda
+2025-04-06 20:26:29,450 - xss-firewall - INFO - XSS Firewall starting up...
+2025-04-06 20:26:29,461 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.5.34:5000
+2025-04-06 20:26:29,461 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 20:26:36,132 - werkzeug - INFO - 192.168.5.34 - - [06/Apr/2025 20:26:36] "GET / HTTP/1.1" 200 -
+2025-04-06 20:26:36,263 - werkzeug - INFO - 192.168.5.34 - - [06/Apr/2025 20:26:36] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-04-06 20:26:46,964 - werkzeug - INFO - 192.168.5.34 - - [06/Apr/2025 20:26:46] "POST /analyze HTTP/1.1" 200 -
+2025-04-06 20:26:48,487 - werkzeug - INFO - 192.168.5.34 - - [06/Apr/2025 20:26:48] "GET /welcome HTTP/1.1" 200 -
+2025-04-06 20:26:48,505 - werkzeug - INFO - 192.168.5.34 - - [06/Apr/2025 20:26:48] "GET /static/punjabi_university_logo.jpg HTTP/1.1" 200 -
+2025-04-06 20:26:55,180 - werkzeug - INFO - 192.168.5.34 - - [06/Apr/2025 20:26:55] "GET / HTTP/1.1" 200 -
+2025-04-06 20:27:07,042 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-04-06 20:27:07,069 - werkzeug - INFO - 192.168.5.34 - - [06/Apr/2025 20:27:07] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-04-06 20:27:15,051 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-04-06 20:27:15,112 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 0.9952
+2025-04-06 20:27:15,113 - werkzeug - INFO - 192.168.5.34 - - [06/Apr/2025 20:27:15] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-04-06 20:27:26,896 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-04-06 20:27:26,932 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 1.0000
+2025-04-06 20:27:26,933 - werkzeug - INFO - 192.168.5.34 - - [06/Apr/2025 20:27:26] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-04-06 20:27:40,242 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-04-06 20:27:40,276 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 1.0000
+2025-04-06 20:27:40,278 - werkzeug - INFO - 192.168.5.34 - - [06/Apr/2025 20:27:40] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-04-06 20:27:45,356 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-04-06 20:27:45,389 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 1.0000
+2025-04-06 20:27:45,390 - werkzeug - INFO - 192.168.5.34 - - [06/Apr/2025 20:27:45] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-04-06 20:27:59,747 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-04-06 20:27:59,783 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 0.9993
+2025-04-06 20:27:59,785 - werkzeug - INFO - 192.168.5.34 - - [06/Apr/2025 20:27:59] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-04-06 20:28:09,737 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-04-06 20:28:09,739 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 0.9952
+2025-04-06 20:28:09,740 - werkzeug - INFO - 192.168.5.34 - - [06/Apr/2025 20:28:09] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-04-06 20:28:36,822 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-04-06 20:28:36,885 - werkzeug - INFO - 192.168.5.34 - - [06/Apr/2025 20:28:36] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-04-06 20:29:04,785 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-04-06 20:29:04,831 - werkzeug - INFO - 192.168.5.34 - - [06/Apr/2025 20:29:04] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-04-06 20:32:51,871 - xss-firewall - INFO - Model loaded successfully to cuda
+2025-04-06 20:32:51,871 - xss-firewall - INFO - XSS Firewall starting up...
+2025-04-06 20:32:51,878 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.5.34:5000
+2025-04-06 20:32:51,878 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 20:33:04,816 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-04-06 20:33:04,850 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 0.9995
+2025-04-06 20:33:04,851 - werkzeug - INFO - 192.168.5.34 - - [06/Apr/2025 20:33:04] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-04-06 20:33:18,347 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 0.9995
+2025-04-06 20:33:18,348 - werkzeug - INFO - 192.168.5.34 - - [06/Apr/2025 20:33:18] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-04-06 20:34:09,827 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 0.9999
+2025-04-06 20:34:09,833 - werkzeug - INFO - 192.168.5.34 - - [06/Apr/2025 20:34:09] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-04-06 20:34:32,133 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9994
+2025-04-06 20:34:32,134 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 0.9999
+2025-04-06 20:34:32,135 - werkzeug - INFO - 192.168.5.34 - - [06/Apr/2025 20:34:32] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-04-06 20:34:45,164 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 0.9999
+2025-04-06 20:34:45,166 - werkzeug - INFO - 192.168.5.34 - - [06/Apr/2025 20:34:45] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-04-06 20:34:56,926 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9994
+2025-04-06 20:34:56,928 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 0.9999
+2025-04-06 20:34:56,929 - werkzeug - INFO - 192.168.5.34 - - [06/Apr/2025 20:34:56] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-04-06 20:35:19,896 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9994
+2025-04-06 20:35:19,898 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 0.9999
+2025-04-06 20:35:19,898 - werkzeug - INFO - 192.168.5.34 - - [06/Apr/2025 20:35:19] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-04-06 20:35:30,544 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9994
+2025-04-06 20:35:30,545 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 0.9999
+2025-04-06 20:35:30,546 - werkzeug - INFO - 192.168.5.34 - - [06/Apr/2025 20:35:30] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-04-06 20:35:46,895 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9994
+2025-04-06 20:35:46,896 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 0.9999
+2025-04-06 20:35:46,898 - werkzeug - INFO - 192.168.5.34 - - [06/Apr/2025 20:35:46] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-04-06 20:36:03,622 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9995
+2025-04-06 20:36:03,624 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 0.9999
+2025-04-06 20:36:03,625 - werkzeug - INFO - 192.168.5.34 - - [06/Apr/2025 20:36:03] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
+2025-04-06 20:36:15,323 - xss-firewall - WARNING - XSS detected in field 'username' with confidence 0.9994
+2025-04-06 20:36:15,325 - xss-firewall - WARNING - XSS detected in field 'comment' with confidence 0.9999
+2025-04-06 20:36:15,327 - werkzeug - INFO - 192.168.5.34 - - [06/Apr/2025 20:36:15] "[31m[1mPOST /analyze HTTP/1.1[0m" 403 -
