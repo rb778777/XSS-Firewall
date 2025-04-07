@@ -71,6 +71,8 @@ Contributions are welcome! Please follow these steps:
 3. Commit your changes with clear messages.
 4. Submit a pull request.
 
+## Developed by Rashik
+
 ## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
